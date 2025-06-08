@@ -7,6 +7,7 @@ namespace TH01.Data
     {
         public CoffeeshopDbContext(DbContextOptions<CoffeeshopDbContext> options) :base(options)
         {
+
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
