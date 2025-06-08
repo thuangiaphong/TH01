@@ -40,7 +40,7 @@
 										<hr class="my-4">
 										<div class="pt-5">
 											<h6 class="mb-0">
-												<a class="text-body">
+												<a asp-controller="Products" asp-action="Shop" class="text-body">
 													<i class="fas fa-long-arrow-altleft me-2"></i>Back to shop
 												</a>
 											</h6>
@@ -95,4 +95,21 @@
 	<br />
 	<br />
 	<br />
+	<div class="col-lg-5 bg-grey">
+		<div class="p-5">
+			<h4 class="fw-bold mb-5 mt-2 pt-1">Summary</h4>
+			<hr class="my-4">
+			<div class="d-flex justify-content-between mb-5">
+				<h5 class="text-uppercase">Total price</h5>
+				<h5>@ViewBag.TotalCart.ToString("c")</h5>
+			</div>
+			<a asp-controller="Orders" asp-action="Checkout">
+				<button type="button"
+						class="btn btn-primary w-100 text-center"
+						data-mdb-ripple-color="dark">
+					Proceed
+				</button>
+			</a>
+		</div>
+	</div>
 }
